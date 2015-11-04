@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('about', 'PagesController@about');
+
 Route::get('home', function(){
 	if(Auth::guest()){
 		return Redirect::to('auth/login');
