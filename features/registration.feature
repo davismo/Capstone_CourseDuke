@@ -4,11 +4,12 @@ Feature: Registration and Activation
 	I need the ability to register and activate a new account
 
 	Scenario: All fields are required
-		Given I am on the "register" page
+		Given I am on the "auth/register" page
 		When I fill in "name" with ""
 		And I fill in "email" with ""
 		And I fill in "password" with ""
 		And I fill in "password_confirmation" with ""
+		And I press "Register"
 		Then I should see "The name field is required"
 		And I should see "The name field is required"
 		And I should see "The name field is required"

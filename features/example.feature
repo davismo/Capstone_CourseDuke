@@ -10,4 +10,3 @@ Feature: Testing
 	Scenario: Dashboard is locked to guests
 		When I go to "home"
 		Then the url should match "auth/login"	
-		And I can do something with Laravel

@@ -33,4 +33,12 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
         PHPUnit::assertEquals('acceptance', env('APP_ENV'));
         PHPUnit::assertTrue(config('app.debug'));
     }
+
+    /**
+     * @Given I am on the :page page
+     */
+    public function iAmOnThePage($page)
+    {
+        $this->visitPath($page);
+    }
 }

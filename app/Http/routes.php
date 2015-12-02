@@ -11,12 +11,26 @@
 |
 */
 
+/*
+	Home Page
+ */
+
+
+Route::get('/', 'PagesController@home');
+
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+/*
+	About Page
+ */
 
 Route::get('about', 'PagesController@about');
 
+/*
 Route::get('home', function(){
 	if(Auth::guest()){
 		return Redirect::to('auth/login');
@@ -24,6 +38,7 @@ Route::get('home', function(){
 		echo 'Welcome home ' . Auth::user()->email . '.';
 	}
 });
+*/
 
 Route::get('user/{id}', function($id){
 	$user = App\User::find($id);
