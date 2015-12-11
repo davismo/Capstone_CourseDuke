@@ -41,4 +41,32 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
     {
         $this->visitPath($page);
     }
+
+    /**
+     * @Then /^(?:there should be )?an? "(?P<element>[^"]*)" with(?: attributes)? "(?P<atts>[^"]*)" having values "(?P<vals>[^"]*)"$/
+     */
+    public function thereShouldBeAnElementWithAttributesHavingValues($element, $atts, $vals)
+    {
+        $selector = $element;
+        $atts = explode(',', $atts);
+        $vals = explode(',', $vals);
+        for ($i = 0; $i < count($atts); ++$i) {
+            $selector .= '['.$atts[$i].'="'.$vals[$i].'"]';
+        }
+        $this->assertSession()->elementExists('css', $selector);
+    }
+
+    /**
+     * @Then every visible input should have a label
+     */
+    public function everyVisibleInputShouldHaveALabel()
+    {
+        $xpath = '(//select|//input|//textarea)[not(@id="g-recaptcha-response" or @type="hidden" or @type="submit" or @type="radio" or contains(@style,"display:none"))]';
+        $fields = $this->getSession()->getPage()->findAll('xpath', $xpath);
+        foreach ($fields as $f) {
+            $this->assertSession()->elementExists('css', 'label[for="'.$f->getAttribute('id').'"]');
+        }
+    }
+
+
 }

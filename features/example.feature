@@ -3,9 +3,6 @@ Feature: Testing
 	As a teacher
 	I want to demonstrate how to install and create feature
 
-	Scenario: Home Page 
-		Given I am on the homepage
-		Then I should see "Laravel 5"
 
 	Scenario: Dashboard is locked to guests
 		When I go to "home"

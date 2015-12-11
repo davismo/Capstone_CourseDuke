@@ -1,29 +1,47 @@
 <!-- resources/views/auth/register.blade.php -->
+@extends('app')
 
-<form method="POST" action="/auth/register">
-    {!! csrf_field() !!}
+@section('content')
 
-    <div>
-        Name
-        <input type="text" name="name" value="{{ old('name') }}">
-    </div>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div>
-        Email
-        <input type="email" name="email" value="{{ old('email') }}">
-    </div>
+<head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="/css/tmp.css">
+    </head>
 
-    <div>
-        Password
-        <input type="password" name="password">
-    </div>
+        <body>  
+            <h1>Register</h1>  
 
-    <div>
-        Confirm Password
-        <input type="password" name="password_confirmation">
-    </div>
+            <form method="POST" action="/auth/register">
+                {!! csrf_field() !!}
 
-    <div>
-        <button type="submit">Register</button>
-    </div>
-</form>
+                <div>
+                    Name
+                    <input type="text" name="name" id="name" value="{{ old('name') }}">
+                </div>
+
+                <div>
+                    Email
+                    <input type="email" name="email" id="email" value="{{ old('email') }}">
+                </div>
+
+                <div>
+                    Password
+                    <input type="password" name="password" id="password">
+                </div>
+
+                <div>
+                    Confirm Password
+                    <input type="password" name="password_confirmation" id="password_confirmation">
+                </div>
+
+                <div>
+                    <button type="submit" id="submit">Register</button>
+                </div>
+            </form>
+        </body>
+    </html>    
+@stop
