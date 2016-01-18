@@ -16,13 +16,13 @@
  */
 
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'Auth\AuthController@getLogin');
 
 /*
-Route::get('/', function () {
-    return view('welcome');
-});
+	Contact Page
 */
+
+Route::get('contact', 'PagesController@conact');	
 
 /*
 	About Page
@@ -40,7 +40,8 @@ Route::get('home', function(){
 });
 */
 
-Route::get('user/{id}', function($id){
+Route::get('user/{id}', function($id)
+{
 	$user = App\User::find($id);
 	echo 'The user with ID of' . $id . 'has an email of: ' . $user->email;
 });

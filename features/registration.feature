@@ -7,7 +7,10 @@ Feature: Registration and Activation
         Given I am on the "auth/register" page
         Then there should be a "form" with "action,method" having values "/auth/register,POST"
         And an "input" with "type,name" having values "hidden,_token"
-        And an "input" with "type,name,id" having values "text,name,name"
+        And an "input" with "type,name,id" having values "text,firstname,firstname"
+        And an "input" with "type,name,id" having values "text,lastname,lastname"
+        And an "input" with "type,name,id" having values "text,concentration,concentration"
+        And an "input" with "type,name,id" having values "text,grad,grad"
         And an "input" with "type,name,id" having values "email,email,email"
         And an "input" with "type,name,id" having values "password,password,password"
         And an "input" with "type,name,id" having values "password,password_confirmation,password_confirmation"
