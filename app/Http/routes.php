@@ -15,14 +15,26 @@
 	Home Page
  */
 
-
+/*
 Route::get('/', 'Auth\AuthController@getLogin');
+
+Route::get('/', 'Pagescontroller@home');
+*/
+
+/**/
+Route::get('/', function(){
+	if(Auth::guest()){
+		return Redirect::to('auth/login');
+	} else {
+		return Redirect::to('profile');
+	}
+});
 
 /*
 	Contact Page
 */
 
-Route::get('contact', 'PagesController@conact');	
+Route::get('contact', 'PagesController@contact');	
 
 /*
 	About Page
@@ -31,14 +43,11 @@ Route::get('contact', 'PagesController@conact');
 Route::get('about', 'PagesController@about');
 
 /*
-Route::get('home', function(){
-	if(Auth::guest()){
-		return Redirect::to('auth/login');
-	} else {
-		echo 'Welcome home ' . Auth::user()->email . '.';
-	}
-});
-*/
+	Profile Page
+ */
+
+Route::get('profile', 'PagesController@profile');
+
 
 Route::get('user/{id}', function($id)
 {

@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
         <meta charset="UTF-8">
         <title>Register</title>
         <link rel="stylesheet" type="text/css" href="/css/tmp.css">
@@ -24,13 +24,8 @@
                 </div>
 
                 <div>
-                    First Name:
-                    <input type="text" name="firstname" id="firstname" value="{{ old('firstname') }}">
-                </div>
-
-                <div>
-                    Last Name:
-                    <input type="text" name="lastname" id="lastname" value="{{ old('lastname') }}">
+                    Name:
+                    <input type="text" name="name" id="name" value="{{ old('name') }}">
                 </div>
 
                 <div>
