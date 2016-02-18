@@ -48,6 +48,25 @@ Route::get('about', 'PagesController@about');
 
 Route::get('profile', 'PagesController@profile');
 
+/*
+	Schedule Creation Page
+ */
+
+Route::get('sched', 'PagesController@sched');
+
+/*
+	My Schedules Page
+ */
+
+Route::get('mysched', 'PagesController@mysched');
+
+/*
+	GPA Calculator Page
+ */
+
+Route::get('gpacalc', 'PagesController@gpacalc');
+
+/**/
 
 Route::get('user/{id}', function($id)
 {
@@ -67,5 +86,6 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
 Route::controllers([
+	'auth'    => 'Auth\AuthController',
    'password' => 'Auth\PasswordController',
 ]);

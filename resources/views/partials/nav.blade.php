@@ -19,6 +19,10 @@
                     <li><a href="{{ url('/about') }}">About</a></li>
                 </ul>
 
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/contact') }}">Contact</a></li>
+                </ul>
+
                 <ul class="nav navbar-nav navbar-right">
                     @if(auth()->guest())
                         @if(!Request::is('auth/login'))

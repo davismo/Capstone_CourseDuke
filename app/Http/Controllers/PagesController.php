@@ -25,5 +25,17 @@ class PagesController extends Controller {
     	return view('pages.profile');
     }
 
+    public function sched() {
+        return view('pages.sched');
+    }
+
+    public function mysched() {
+        return view('pages.mysched');
+    }  
+
+    public function gpacalc() {
+        return view('pages.gpacalc');
+    }    
+
 
 }
