@@ -29,21 +29,24 @@ form div {
 	text-align: left;
 	width: 500px;
 	clear: both;
-	
 }
 
 form div input {
-	width: 100%;
-	
+	width:100%;
+}
+
+form div #checkbox {
+	display: inline-block;
+	float: left;
 }
 
 form div button {
+	display: inline-block;
 	float: right;
 }
 
-#footer {
-	text-align: center; 
-	padding-top: 20px;
+.login-bottom {
+	text-align: center;
 	clear: both;
 }
 
@@ -58,7 +61,6 @@ a:hover {
 	text-decoration: none;
 }
 
-}
 
 
 

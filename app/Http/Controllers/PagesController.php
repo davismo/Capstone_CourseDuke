@@ -29,13 +29,21 @@ class PagesController extends Controller {
         return view('pages.sched');
     }
 
+    public function sched2() {
+        return view('pages.sched2');
+    }
+
     public function mysched() {
         return view('pages.mysched');
     }  
 
     public function gpacalc() {
         return view('pages.gpacalc');
-    }    
+    } 
+
+    public function tmp() {
+        return view('pages.tmp');
+    }   
 
 
 }

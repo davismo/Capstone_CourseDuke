@@ -55,6 +55,12 @@ Route::get('profile', 'PagesController@profile');
 Route::get('sched', 'PagesController@sched');
 
 /*
+	Schedule Creation Page Cont'd.
+ */
+
+Route::get('sched2', 'PagesController@sched2');
+
+/*
 	My Schedules Page
  */
 
@@ -65,6 +71,12 @@ Route::get('mysched', 'PagesController@mysched');
  */
 
 Route::get('gpacalc', 'PagesController@gpacalc');
+
+/*
+	Temporary Page
+ */
+
+Route::get('tmp', 'PagesController@tmp');
 
 /**/
 

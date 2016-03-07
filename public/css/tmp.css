@@ -15,7 +15,10 @@ h2 {
 	text-align: center;
 }
 
-
+.btn {
+	text-align: center;
+	margin-left: 75px;
+}
 
 .btn:hover {
   	text-decoration: none;
@@ -26,12 +29,11 @@ h2 {
 	float: left; 
 	width: 33%;
 	border-radius: 10px;
-	text-shadow: 1px 1px 3px #666666;
-	color: purple;
 	font-size: 30px;
-	background: #7d868c;
+	background: purple;
 	padding: 10px 20px 10px 0px;
 	text-decoration: none;
+	border: solid black 2px;
 
 }
 
@@ -39,12 +41,11 @@ h2 {
 	float: right; 
 	width: 33%;
 	border-radius: 10px;
-	text-shadow: 1px 1px 3px #666666;
-	color: purple;
 	font-size: 30px;
-	background: #7d868c;
+	background: purple;
 	padding: 10px 20px 10px 0px;
 	text-decoration: none;
+	border: solid black 2px;
 
  }
 
@@ -52,12 +53,11 @@ h2 {
 	display:inline-block; 
 	width: 33%;
 	border-radius: 10px;
-	text-shadow: 1px 1px 3px #666666;
-	color: purple;
 	font-size: 30px;
-	background: #7d868c;
+	background: purple;
 	padding: 10px 20px 10px 0px;
 	text-decoration: none;
+	border: solid black 2px;
 
  }
 
@@ -65,9 +65,7 @@ form {
 	text-align: center;
 	width: 500px;
 	margin: auto;
-	clear: both;
-	margin-bottom: 30px;
-		
+	clear: both;	
 }
 
 form div {
@@ -88,13 +86,68 @@ form div button {
 	float: right;
 }
 
-
 a {
-	color: lightgray;
-	padding: 50px;
+	color: darkgray;
+}
+a:hover {
+	color: gold;
+	text-decoration: none;
 }
 
-a:hover {
-	color: purple;
-	text-decoration: none;
+.gridbox {
+	display: grid;
+    grid-template-columns: 100px 10px 100px 10px 100px;
+    grid-template-rows: auto 10px auto;
+    background-color: #fff;
+    color: #444;
+}
+
+.box {
+    width:100px;
+    height:100px;
+    background:gray;
+    border:2px solid #696969;
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+    position: absolute;  
+} 
+
+#topleft{    
+    margin:0 auto;
+    top:50%;
+    left:50%;
+    margin-top:-110px;
+    margin-left:-110px;
+}
+#topright{
+    margin:0 auto;
+    top:50%;
+    left:50%;
+    margin-top:-110px;
+    margin-left:10px;
+}
+#bottomleft{
+    margin:0 auto;
+    top:50%;
+    left:50%;
+    margin-top:10px;
+    margin-left:10px;
+}
+#bottomright{
+    margin:0 auto;
+    top:50%;
+    left:50%;
+    margin-top:10px;
+    margin-left:-110px;
+}
+
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }
