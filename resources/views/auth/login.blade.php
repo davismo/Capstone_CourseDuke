@@ -1,6 +1,8 @@
 <!-- resources/views/auth/login.blade.php -->
 
-@extends('app')
+@extends('layouts.master')
+@section('title','Login')
+
 @section('content')
 
 @if (count($errors) > 0)
@@ -11,18 +13,16 @@
     </ul>
 @endif      
 
-<!DOCTYPE html>
-<html lang="en">
     
     <head>
-        <meta charset="UTF-8">
-        <title>Login</title>
         <link rel="stylesheet" type="text/css" href="/css/home.css">
     </head>
 
         <body>
-            <div id="logincontainer" class="logincontainer">  
-                <h1>CourseDuke</h1>  
+            <div class="container">  
+                <h1 class="page-title">CourseDuke</h1>
+                <h2>Login</h2>
+
                 <form method="POST" action="/auth/login">
                     {!! csrf_field() !!}
                     <div>

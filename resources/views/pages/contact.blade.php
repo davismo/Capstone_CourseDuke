@@ -2,14 +2,8 @@
 
 @section('title','Contact')
 
-@section('sidebar')
-	@parent
-
-	<p>This is appended to the master sidebar.</p>
-@endsection
-
 @section('content')
-
+	<div class="main">
 		<h1>Contact </h1>
 
 		<h3>For more information...</h3>
@@ -18,7 +12,7 @@
 			email: test@test.com <br>
 			phone: 555.555.5555
 		</p>	
-
+	</div>	
 @endsection
 
 

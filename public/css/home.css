@@ -3,12 +3,11 @@ body {
 	font-family: 'Montserrat'; 
 }
 
-h1 {
+.page-title {
 	text-align: center;
 	font-weight: bold;
 	color: purple;
-	font-size: 75px;
-	margin-top: 5%;
+	font-size: 4em;
 }
 
 h2 {
@@ -27,7 +26,7 @@ form div {
 	font-size: 14px;
 	padding: 15px;
 	text-align: left;
-	width: 500px;
+	width: 100%;
 	clear: both;
 }
 
@@ -50,18 +49,39 @@ form div button {
 	clear: both;
 }
 
-a {
-	color: darkgray;
-	text-decoration: none; 
-	padding: 30px;
+.column-left {   
+	border: solid black 2px;
+	border-radius: 5px;
 }
 
-a:hover {
-	color: purple;
+.column-right { 
+	border: solid black 2px;
+	border-radius: 5px;
+}
+
+.column-center {
+ 	border: solid black 2px;
+ 	border-radius: 5px;
+}
+
+
+.content-list {
+	text-align: center;
+	border-radius: 10px;
+	margin-left: -60px;
+}
+
+ul li a:link { color: black; }
+ul li a:visited { color: black; }
+ul li a:hover { color: purple; }
+ul li a:active { color: #D4AF37; }
+
+.list li {
+	display: inline;
+	list-style: none;
+	font-size: 1em;
 	text-decoration: none;
+	padding: 40px 30px 40px 40px;
 }
-
-
-
 
 

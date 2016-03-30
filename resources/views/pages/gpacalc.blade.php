@@ -1,30 +1,43 @@
-@extends('app')
+@extends('layouts.master')
+
+@section('title', 'GPA Calculator')
 
 @section('content')
 
-<!DOCTYPE html>
-<html lang="en">
 
-	<head>
-        <meta charset="UTF-8">
-        <title>GPA Calculator</title>
-        <link rel="stylesheet" type="text/css" href="/css/tmp.css">
-	</head>
 
-	<body>
-		<div id="wrapper">	
-			<h1>GPA Calculator</h1>
-			
-			<h2>{{Auth::user()->email}}</h2>
-			
-			<hr>
-			</br>
-			</br>
+<h1 class="heading">GPA Calculator</h1>
 
-		</div>
 
-	</body>
+<form method="POST" action="{{ url('/gpacalc') }}">
+    {!! csrf_field() !!}
 
-</html>	
+    <div>
+        Current GPA <br>
+        <input type="text" name="current-gpa" id="current-gpa" value="{{ old('current-gpa') }}">
+    </div>
 
-@stop
+    <div>
+        Current Credits Total <br>
+        <input type="text" name="current-credits" id="current-credits" value="{{ old('current-credits') }}">
+    </div>
+
+    <div>
+        Credit Hours <br>
+        <input type="text" name="credit-hours" id="credit-hours" value="{{ old('credit-hours') }}">
+    </div>
+
+    <div>
+        Grade (out of 4.0) <br>
+        <input type="text" name="grade" id="grade" value="{{ old('grade') }}">
+    </div>
+
+    <div>
+        Submit <br>
+        <input type="submit" name="submit" id="submit" value="{{ old('submit') }}">
+    </div>
+
+</form>            
+
+
+@endsection

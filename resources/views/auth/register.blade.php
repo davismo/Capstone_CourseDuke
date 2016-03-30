@@ -1,6 +1,5 @@
 <!-- resources/views/auth/register.blade.php -->
-@extends('app')
-
+@extends('layouts.master')
 @section('content')
 
 @if (count($errors) > 0)
@@ -11,17 +10,15 @@
     </ul>
 @endif      
 
-<!DOCTYPE html>
-<html lang="en">
+
 
     <head>
-        <meta charset="UTF-8">
-        <title>Register</title>
-        <link rel="stylesheet" type="text/css" href="/css/tmp.css">
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
     </head>
 
         <body>  
-            <h1>Register</h1>  
+            <h1 class="page-title">CourseDuke</h1> 
+            <h2>Register</h2> 
 
             <form method="POST" action="/auth/register">
                 {!! csrf_field() !!}

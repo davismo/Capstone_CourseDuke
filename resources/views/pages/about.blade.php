@@ -1,5 +1,4 @@
-@extends('app')
-@extends('partials.footer')
+@extends('layouts.master')
 @section('content')
 
 		<h1>About</h1>

@@ -1,28 +1,42 @@
-@extends('app')
+@extends('layouts.master')
 
 @section('title','Profile')
 
 @section('content')
+
+	<head>
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+    </head>
+
 	<body>
-		<div id="wrapper">
-			<h1>Welcome</h1>
+		<div class="main">
+			<h1 style="text-align: center;">Welcome</h1>
 			
-			<h2>{{Auth::user()->username}}</h2>
+			<h2 style="text-align: center;">{{Auth::user()->username}}</h2>
 
 			<br>
 			<br>
-
-			<div class="btn">
-				<div class="column-center">
-					<a href="{{ url('/sched') }}">Schedule Creation</a>
-				</div>
-				<div class="column-left">
-					<a href="{{ url('/mysched') }}">My Schedules</a>
-				</div>
-				<div class="column-right">
-					<a href="{{ url('/tmp') }}">GPA Calculator</a>
-				</div>
-			</div>	
+			<br>
+			<br>
+			<div class="content-list">
+				<ul class="list">
+					<li class="column-center">
+						<a href="{{ url('/sched') }}">Schedule Creation</a>
+					</li>
+					<li class="column-left">
+						<a href="{{ url('/mysched') }}">My Schedules</a>
+					</li>
+					<li class="column-right">
+						<a href="{{ url('/gpacalc') }}">GPA Calculator</a>
+					</li>
+				</ul>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>	
 	
 		</div>
 

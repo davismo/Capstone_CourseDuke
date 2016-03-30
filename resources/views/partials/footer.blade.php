@@ -2,14 +2,8 @@
 	
 <div class=footer-left>
 	<ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}">Home</a></li>
-                </ul>
-
-                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/') }}">Home</a></li>           
                     <li><a href="{{ url('/about') }}">About</a></li>
-                </ul>
-
-                <ul class="nav navbar-nav">
                     <li><a href="{{ url('/contact') }}">Contact</a></li>
     </ul>
 
