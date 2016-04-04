@@ -1,7 +1,4 @@
-body {
-	background-color: lightgrey;
-	font-family: 'Montserrat'; 
-}
+
 
 .page-title {
 	text-align: center;
@@ -51,37 +48,44 @@ form div button {
 
 .column-left {   
 	border: solid black 2px;
-	border-radius: 5px;
+	background: #D4AF37;
+	border-radius: 20px;
+	padding: 2em 1.25em 1.5em 1.25em;
 }
 
 .column-right { 
 	border: solid black 2px;
-	border-radius: 5px;
+	background: #D4AF37;
+	border-radius: 20px;
+	padding: 2em 1.25em 1.5em 1.25em;
+	margin-left: 50px !important;
 }
-
-.column-center {
- 	border: solid black 2px;
- 	border-radius: 5px;
-}
-
 
 .content-list {
 	text-align: center;
 	border-radius: 10px;
-	margin-left: -60px;
+	margin: 100px 50px 125px 0px;
 }
 
-ul li a:link { color: black; }
-ul li a:visited { color: black; }
-ul li a:hover { color: purple; }
-ul li a:active { color: #D4AF37; }
+.content-list a {
+	font-size: 2em;
+	text-decoration: none;
+}
+
+.content-list a:hover {
+	text-decoration: none;
+}
 
 .list li {
 	display: inline;
 	list-style: none;
-	font-size: 1em;
-	text-decoration: none;
-	padding: 40px 30px 40px 40px;
 }
+
+ul li a:link    { color: purple;  }
+ul li a:visited { color: purple;  }
+ul li a:hover   { color: white;   }
+ul li a:active  { color: #D4AF37; }
+
+
 
 

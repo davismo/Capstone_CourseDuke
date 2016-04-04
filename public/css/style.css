@@ -59,26 +59,32 @@ th, td {
 	border-bottom: 1px solid #ddd;
 }
 
+
 a:link { color: purple; }
 a:visited { color: gold; }
-a:hover { color: purple; }
+a:hover { color: #D4AF37; }
 a:active { color: purple; }
 
 /***
 Layout 
 ***/
 
+.page-container {
+	margin: 0 auto;
+}
+
 .container
 {
 	max-width: 50em;
 	margin: 0 auto;
+	padding: 1em 1.25em; 
 	background-color: #fff;
 }
 
 .header
 {
 	color: #fff;
-	background: lightgray;
+	background: #D4AF37;
 	padding: 1em 1.25em;
 }
 
@@ -90,13 +96,16 @@ Layout
 	padding: 0;
 }
 
-.content { padding: 1em 1.25em; }
+.content { 
+	padding: 1em 1.25em; 
+}
 
 .footer
 {
 	color: #fff;
 	background: purple;
 }
+
 
 /***
 Nav
@@ -127,16 +136,10 @@ Nav
 	border-bottom: 1px solid gray;
 }
 
-.nav a:link { color: white; }
-.nav a:visited { color: white; }
-
-.nav a:hover {
-	color: #D4AF37;
-}
-
-.nav a:active {
-	color: #D4AF37;
-}
+.nav a:link    { color: white;   }
+.nav a:visited { color: white;   }
+.nav a:hover   { color: #D4AF37; }
+.nav a:active  { color: #D4AF37; }
 
 /***
 Single styles
@@ -209,7 +212,7 @@ Wide styles
 	.header { padding: 1.5em 3em; }
 	.nav-bar { padding: 1em 3em; }
 	.content { padding: 2em 3em; }
-	.footer { padding: 2em 3em; }
+	.footer { padding: 1em 3em; }
 	
 	.nav li {
 		display: inline;

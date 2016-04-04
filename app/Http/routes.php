@@ -102,7 +102,7 @@ Route::controllers([
    'password' => 'Auth\PasswordController',
 ]);
 
-
+Route::resource('course', 'CourseController');
 
 
 

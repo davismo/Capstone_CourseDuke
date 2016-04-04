@@ -4,9 +4,13 @@
 		<meta charset="utf-8">
 		<title>Course Duke</title>
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<!-- page-specific scripts -->
+		@yield('head-scripts')
 	</head>
 	<body>
-		<div class="container">
+
+
+		<div class="page-container">
 			<div class="header">
 				<h1 class="header-heading">CourseDuke</h1>
 			</div>
@@ -34,12 +38,15 @@
                     @endif
 				</ul>
 			</div>
-			<div class="content">	
+
+			<div class="container">	
 				@yield('content')
+			</div>
+
+			<div class="footer">
+			@include('partials.footer')
 			</div>	
 		</div>	
-		<div class="footer">
-			@include('partials.footer')
-		</div>
+		
 	</body>
 </html>
