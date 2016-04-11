@@ -7,20 +7,21 @@
 		<!-- page-specific scripts -->
 		@yield('head-scripts')
 	</head>
+
 	<body>
 
 
 		<div class="page-container">
 			<div class="header">
 				<h1 class="header-heading">CourseDuke</h1>
+				<h4 class="subheading"><i>"Course Scheduling and Advisement Application for James Madison University ISAT Students."</i></h4>
 			</div>
 			<div class="nav-bar">
 				<ul class="nav">
 					<li><a href="{{ url('/') }}">Home</a></li>           
                     <li><a href="{{ url('/about') }}">About</a></li>
                     <li><a href="{{ url('/contact') }}">Contact</a></li>
-				</ul>
-				<ul class="nav nav-right">
+
 					@if(auth()->guest())
                         @if(!Request::is('auth/login'))
                             <li><a href="{{ url('/auth/login') }}">Login</a></li>
@@ -29,11 +30,11 @@
                             <li><a href="{{ url('/auth/register') }}">Register</a></li>
                         @endif
                     @else
-                    	<div class="dropdown" style="float:right;">
-						  <button class="dropbtn">{{ auth()->user()->name }}</button>
-						  <div class="dropdown-content">
-						    <a href="{{ url('/auth/logout') }}">Logout</a>
-						  </div>
+                    	<div class="dropdown">
+                    		<button class="dropbtn">{{ auth()->user()->name }}</button>
+							<div class="dropdown-content">
+						    	<a href="{{ url('/auth/logout') }}">Logout</a>
+							</div>
 						</div>
                     @endif
 				</ul>
@@ -49,4 +50,5 @@
 		</div>	
 		
 	</body>
+
 </html>

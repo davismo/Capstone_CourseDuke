@@ -12,94 +12,78 @@
 <br>
 <br>
 
-<form method="POST" action="{{ url('/gpacalc') }}">
-    {!! csrf_field() !!}
+<div class="gpa-wrapper">
+    <form method="POST"  action="{{ url('/gpacalc') }}" name="GPACalcForm">
+        {!! csrf_field() !!}
 
-    <div>
-        Current GPA <br>
-        <input type="text" name="current-gpa" id="current-gpa" value="{{ old('current-gpa') }}">
-    </div>
+        <div>
+            Current Cumulative GPA
+            <input type="text" name="current-gpa" id="current-gpa" value="{{ old('current-gpa') }}">
+        </div>
 
-    <div>
-        Current Credits Total <br>
-        <input type="text" name="current-credits" id="current-credits" value="{{ old('current-credits') }}">
-    </div>
+        <div>
+            Current Credits Total
+            <input type="text" name="current-credits" id="current-credits" value="{{ old('current-credits') }}">
+        </div>
 
-    <div>
-        Credit Hours <br>
-        <input type="text" name="credit-hours" id="credit-hours" value="{{ old('credit-hours') }}">
-    </div>
+        <div>
+            New Cumulative GPA(out of 4.0)
+            <input type="text" name="grade" id="grade" value="{{ old('grade') }}">
+        </div>
 
-    <div>
-        Grade (out of 4.0) <br>
-        <input type="text" name="grade" id="grade" value="{{ old('grade') }}">
-    </div>
-
-    <div>
-        Submit <br>
-        <input type="submit" name="submit" id="submit" value="{{ old('submit') }}">
-    </div>
-
-</form> 
-
-
-<div class="gpa-wrapper" style="text-align: center;">
-    <form Name="GPACalcForm" style="text-align: center;">
-        <table BORDER=5 BGCOLOR=#C0C0C0 style="width: 100%;">
+        <table class="table">
             <br>
             <th></th>
             <th>Grade</th>
             <th>Credits</th>
             <tr>
                 <td>Class 1</td>
-                <td><input type=text SIZE=5 NAME="GR1" ALIGN=TOP MAXLENGth=5></td>
-                <td><input type=text SIZE=5 NAME="CR1" ALIGN=TOP MAXLENGth=5></td>
+                <td><input type=text size=5 name="GR1" align=TOP maxlength="5"></td>
+                <td><input type=text size=5 name="CR1" align=TOP maxlength="5"></td>
             </tr>
             <tr>
                 <td>Class 2</td>
-                <td><input type=text SIZE=5 NAME="GR2" ALIGN=TOP MAXLENGth=5></td>
-                <td><input type=text SIZE=5 NAME="CR2" ALIGN=TOP MAXLENGth=5></td>
+                <td><input type=text size=5 name="GR2" align=TOP maxlength="5"></td>
+                <td><input type=text size=5 name="CR2" align=TOP maxlength="5"></td>
             </tr>
             <tr>
                 <td>Class 3</td>
-                <td><input type=text SIZE=5 NAME="GR3" ALIGN=TOP MAXLENGth=5></td>
-                <td><input type=text SIZE=5 NAME="CR3" ALIGN=TOP MAXLENGth=5></td>
+                <td><input type=text size=5 name="GR3" align=TOP maxlength="5"></td>
+                <td><input type=text size=5 name="CR3" align=TOP maxlength="5"></td>
             </tr>
             <tr>
                 <td>Class 4</td>
-                <td><input type=text SIZE=5 NAME="GR4" ALIGN=TOP MAXLENGth=5></td>
-                <td><input type=text SIZE=5 NAME="CR4" ALIGN=TOP MAXLENGth=5></td>
+                <td><input type=text size=5 name="GR4" align=TOP maxlength="5"></td>
+                <td><input type=text size=5 name="CR4" align=TOP maxlength="5"></td>
             </tr>
             <tr>
                 <td>Class 5</td>
-                <td><input type=text SIZE=5 NAME="GR5" ALIGN=TOP MAXLENGth=5></td>
-                <td><input type=text SIZE=5 NAME="CR5" ALIGN=TOP MAXLENGth=5></td>
+                <td><input type=text size=5 name="GR5" align=TOP maxlength="5"></td>
+                <td><input type=text size=5 name="CR5" align=TOP maxlength="5"></td>
             </tr>
             <tr>
                 <td>Class 6</td>
-                <td><input type=text SIZE=5 NAME="GR6" ALIGN=TOP MAXLENGth=5></td>
-                <td><input type=text SIZE=5 NAME="CR6" ALIGN=TOP MAXLENGth=5></td>
+                <td><input type=text size=5 name="GR6" align=TOP maxlength="5"></td>
+                <td><input type=text size=5 name="CR6" align=TOP maxlength="5"></td>
             </tr>
             <tr>
                 <td>Class 7</td>
-                <td><input type=text SIZE=5 NAME="GR7" ALIGN=TOP MAXLENGth=5></td>
-                <td><input type=text SIZE=5 NAME="CR7" ALIGN=TOP MAXLENGth=5></td>
+                <td><input type=text size=5 name="GR7" align=TOP maxlength="5"></td>
+                <td><input type=text size=5 name="CR7" align=TOP maxlength="5"></td>
             </tr>
             <tr>
                 <td>Class 8</td>
-                <td><input type=text SIZE=5 NAME="GR8" ALIGN=TOP MAXLENGth=5></td>
-                <td><input type=text SIZE=5 NAME="CR8" ALIGN=TOP MAXLENGth=5></td>
+                <td><input type=text size=5 name="GR8" align=TOP maxlength="5"></td>
+                <td><input type=text size=5 name="CR8" align=TOP maxlength="5"></td>
             </tr>
-            <tr style="text-align: center;">
-                <td COLSPAN=3><input type="BUTTON" VALUE="Calculate" NAME="CalcButton" OnClick="gpacalc()"></td>
+            <tr>
+                <td style="text-align: center;"><input class="btn" type="BUTTON" VALUE="Calculate" name="CalcButton" OnClick="gpacalc()"></td>
+                <td colspan="2">New GPA:<textarea name="textbox" id="textbox" rows="1" cols="15"></textarea></td>
             </tr>
         </table>
     </form>
 
-    <div class="gpa-area">
-        GPA Area: 
-        <textarea name="textbox" id="textbox" rows="" cols=""></textarea>
-    </div>
+    
 
 </div>
 
@@ -114,29 +98,31 @@
     var incr = new Array(5);
 
     // define valid grades and their values
-    var grcount = 11; 
-    gr[0] = "A+";
-    cr[0] = 5;
-    gr[1] = "A"; 
-    cr[1] = 4; 
-    gr[2] = "A-";
-    cr[2] = 3.66;
-    gr[3] = "B+";
-    cr[3] = 3.33;
-    gr[4] = "B";
-    cr[4] = 3;
-    gr[5] = "B-";
-    cr[5] = 2.66;
-    gr[6] = "C+";
-    cr[6] = 2.33;
-    gr[7] = "C";
-    cr[7] = 2;
-    gr[8] = "C-";
-    cr[8] = 1.66;
+    var grcount = 12; 
+    gr[0] = "A"; 
+    cr[0] = 4.00; 
+    gr[1] = "A-";
+    cr[1] = 3.66;
+    gr[2] = "B+";
+    cr[2] = 3.33;
+    gr[3] = "B";
+    cr[3] = 3.00;
+    gr[4] = "B-";
+    cr[4] = 2.66;
+    gr[5] = "C+";
+    cr[5] = 2.33;
+    gr[6] = "C";
+    cr[6] = 2.0;
+    gr[7] = "C-";
+    cr[7] = 1.66;
+    gr[8] = "D+";
+    cr[8] = 1.33;
     gr[9] = "D";
-    cr[9] = 1;
-    gr[10] = "F";
-    cr[10] = 0;
+    cr[9] = 1.0;
+    gr[10] = "D-";
+    cr[10] = 0.66;
+    gr[11] = "F";
+    cr[11] = 0;
     // retrieve user input
     ingr[0] = document.GPACalcForm.GR1.value;
     ingr[1] = document.GPACalcForm.GR2.value;

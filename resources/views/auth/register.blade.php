@@ -51,11 +51,6 @@
     <!--Create new form and separate academic info later-->
 
     <div>
-        Major:
-        <input type="text" name="major" id="major" value="{{ old('major') }}">
-    </div>
-
-    <div>
         <button type="submit" id="submit">Register</button>
     </div>
 </form>

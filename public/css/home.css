@@ -46,6 +46,11 @@ form div button {
 	clear: both;
 }
 
+.login-bottom li {
+	display: inline;
+	list-style: none;
+}
+
 .column-left {   
 	border: solid black 2px;
 	background: #D4AF37;
@@ -57,7 +62,7 @@ form div button {
 	border: solid black 2px;
 	background: #D4AF37;
 	border-radius: 20px;
-	padding: 2em 1.25em 1.5em 1.25em;
+	padding: 2em 2em 1.5em 2em;
 	margin-left: 50px !important;
 }
 

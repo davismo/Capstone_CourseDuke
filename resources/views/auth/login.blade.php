@@ -18,7 +18,7 @@
 @endif      
 
        
- 
+
 <h1 class="page-title">CourseDuke</h1>
 
 <h2>Login</h2>
@@ -43,9 +43,12 @@
 </form>
 
 <div class="login-bottom">
-    <a class="register" href="{{ url('/auth/register') }}">Register</a>
-    <a class="forgotpassword" href="#">Forgot Password?</a>
+    <ul>
+        <li><a class="register" href="{{ url('/auth/register') }}">Register</a></li>
+        <li><a class="forgotpassword" href="#">Forgot Password?</a></li>
+    </ul>    
 </div>
+
 
 
 @endsection

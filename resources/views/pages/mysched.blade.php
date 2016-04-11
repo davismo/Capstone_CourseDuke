@@ -1,40 +1,66 @@
 @extends('layouts.master')
 
 @section('content')
-
-<div id="wrapper">	
-	<h1>My Schedules</h1>
-	<h2>{{Auth::user()->email}}</h2>
 	
-	<hr>
-	</br>
-	</br>
-	</br>
+<h1>My Schedule</h1>
+<h2>{{Auth::user()->username}}</h2>
 
-	<div class='main-container'>
-		 <div class='box' id='topleft'>
-		 	<img src="/images/paper.png" alt="papers" style="width:50px;height:100px;">
-		 </div>
-		 <div class='box' id='topright'>
-		 	<img src="/images/paper.png" alt="papers" style="width:50px;height:100px;">
-		 </div>
-		 <div class='box' id='bottomleft'>
-		 	<img src="/images/paper.png" alt="papers" style="width:50px;height:100px;">
-		 </div>
-		 <div class='box' id='bottomright'>D</div>
+<hr>
+</br>
+</br>
+</br>
+
+<div class="schedContent">
+	<h3>Fall</h3>
+
+	<div class="fallSchedule" id="fallSchedule">
+	    <div>
+	        <textarea name="message1" rows="10" cols="50" readonly>
+	            ISAT 101: Intro to ISAT 3 - 1 credits 
+	            ISAT 113: Issues in Biotechnology - 3 credits
+	            General Education Course
+	            General Education Course
+	        </textarea>
+	    </div>
 	</div>
 
-	<div class="Backbutton">
-		<button onclick="goBack()">Go Back</button>
+	<h3>Spring</h3>
 
-		<script>
-			function goBack() {
-			    window.history.back();
-			}
-		</script>
+	<div class="springSchedule" id="springSchedule">
+	    <div>
+	        <textarea name="spring" rows="10" cols="50" readonly>
+	            ISAT 101: Intro to ISAT 3 - 1 credits 
+	            ISAT 113: Issues in Biotechnology - 3 credits
+	            General Education Course
+	            General Education Course
+	        </textarea>
+	    </div>
 	</div>
 
+	<h3>Summer</h3>
+
+	<div class="summerSchedule" id="summerSchedule">
+	    <div>
+	        <textarea name="summer" rows="10" cols="50" readonly>
+	          ...
+	        </textarea>
+	    </div>
+	</div>
 
 </div>
+
+<br>
+
+<div class="Backbutton">
+	<button class="btn" onclick="goBack()">Go Back</button>
+
+	<script>
+		function goBack() {
+		    window.history.back();
+		}
+	</script>
+</div>
+
+
 @endsection
 
