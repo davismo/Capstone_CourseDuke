@@ -13,13 +13,16 @@
 
 		<div class="page-container">
 			<div class="header">
-				<h1 class="header-heading">CourseDuke</h1>
+				<img class="header-logo" src="/images/CD-logo.png" alt="logo" style="width: 160px; height: 89px;">
 				<h4 class="subheading"><i>"Course Scheduling and Advisement Application for James Madison University ISAT Students."</i></h4>
 			</div>
+
 			<div class="nav-bar">
 				<ul class="nav">
-					<li><a href="{{ url('/') }}">Home</a></li>           
+					<li><a href="{{ url('/') }}">Home</a></li>
+					<li style="color: white;"><strong>|</strong></li>           
                     <li><a href="{{ url('/about') }}">About</a></li>
+                    <li style="color: white;"><strong>|</strong></li>
                     <li><a href="{{ url('/contact') }}">Contact</a></li>
 
 					@if(auth()->guest())
@@ -31,7 +34,7 @@
                         @endif
                     @else
                     	<div class="dropdown">
-                    		<button class="dropbtn">{{ auth()->user()->name }}</button>
+                    		<button class="dropbtn">{{ auth()->user()->username}}</button>
 							<div class="dropdown-content">
 						    	<a href="{{ url('/auth/logout') }}">Logout</a>
 							</div>
@@ -39,6 +42,8 @@
                     @endif
 				</ul>
 			</div>
+
+			<div class="top-bar"></div>
 
 			<div class="container">	
 				@yield('content')

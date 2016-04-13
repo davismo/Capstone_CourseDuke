@@ -34,11 +34,7 @@
         <input type="password" name="password" id="password">
     </div>
     <div>
-        Remember Me
-        <input type="checkbox" name="remember" id="checkbox"> 
-    </div>
-    <div>
-        <button type="submit" id="submit">GO</button>
+        <button class="btn" type="submit" id="submit">GO</button>
     </div>
 </form>
 

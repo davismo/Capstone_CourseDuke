@@ -3,7 +3,7 @@
 @section('content')
 	
 <h1>My Schedule</h1>
-<h2>{{Auth::user()->username}}</h2>
+<h2>{{Auth::user()->name}}</h2>
 
 <hr>
 </br>

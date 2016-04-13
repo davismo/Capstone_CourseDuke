@@ -44,12 +44,24 @@ form div button {
 .login-bottom {
 	text-align: center;
 	clear: both;
+	margin-bottom: 5em;
+	padding-top: 2em;
 }
 
 .login-bottom li {
 	display: inline;
 	list-style: none;
 }
+
+.login-bottom a {
+	color: black !important;
+	text-decoration: none;
+	padding: 2em;
+}
+
+.login-bottom a:hover {
+	color: #D4AF37 !important;
+}	
 
 .column-left {   
 	border: solid black 2px;

@@ -13,7 +13,7 @@ function onlyOneCheckBox() {
                 checkedcount += (checkboxgroup[i].checked) ? 1 : 0;
             }
             if (checkedcount > limit) {
-                alert("You can only select a maximum of " + limit + " checkbox.");
+                alert("You can only select a maximum of " + limit + " sectors.");
                 this.checked = false;
             }
         }
@@ -27,7 +27,7 @@ function onlyOneCheckBox() {
 
 <div class="wrapper" id="wrapper">	
 	<h1 class="heading">Schedule Creation</h1>
-	<h2>{{Auth::user()->username}}</h2>
+	<h2>{{Auth::user()->name}}</h2>
 
 	<hr>
     <br>

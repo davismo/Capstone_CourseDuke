@@ -38,7 +38,7 @@ function drop(ev) {
 </script>
 
 <style>
-#dropbox {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+#dropbox {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa; margin-bottom: 3em;}
 </style>
 
 @endsection
@@ -46,7 +46,7 @@ function drop(ev) {
 @section('content')
 
 <h1 class="heading">Schedule Creation</h1>
-	<h2>{{Auth::user()->username}}</h2>
+	<h2>{{Auth::user()->name}}</h2>
 	
 	<hr>
 	</br>
@@ -59,6 +59,7 @@ function drop(ev) {
 <p>Drag Previous ISAT Classes taken into the rectangle below:</p>
 
 <div class="dropbox" id="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
 <br>
 
 <div class="nextpage">

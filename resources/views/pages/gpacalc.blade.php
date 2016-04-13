@@ -7,7 +7,7 @@
 
 
 <h1 class="heading">GPA Calculator</h1>
-<h2>{{Auth::user()->email}}</h2>
+<h2>{{Auth::user()->name}}</h2>
 <hr>
 <br>
 <br>

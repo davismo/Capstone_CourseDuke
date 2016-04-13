@@ -7,7 +7,7 @@ body {
 	padding: 0;
 	color: #333;
 	background-color: #eee;
-	font: 1em/1.2 "Montserrat", Arial, sans-serif;
+	font: 1em/1.2 "Verdana", "Montserrat", sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -60,10 +60,7 @@ th, td {
 }
 
 
-a:link { color: purple; }
-a:visited { color: gold; }
-a:hover { color: #D4AF37; }
-a:active { color: purple; }
+
 
 /***
 Layout 
@@ -83,25 +80,25 @@ Layout
 
 .header
 {
-	color: #fff;
-	background: #D4AF37;
-	padding: 1em 1.25em;
+	background: #fff;
 }
 
-.header-heading { margin: 0; }
+.subheading {
+	color: purple;
+}
 
-.nav-bar
-{
+.top-bar {
 	background: purple;
+	padding: 0;
+} 
+
+.nav-bar {
+	background: #D4AF37;
 	padding: 0;
 }
 
 .content { 
 	padding: 1em 1.25em; 
-}
-
-.login-bottom {
-	margin-bottom: 60px;
 }
 
 .footer
@@ -121,8 +118,6 @@ Nav
 	list-style: none;
 }
 
-.nav-right {
-}
 
 .nav li {
 	display: inline;
@@ -139,7 +134,7 @@ Nav
 
 .nav a:link    { color: white;   }
 .nav a:visited { color: white;   }
-.nav a:hover   { color: #D4AF37; }
+.nav a:hover   { color: purple; }
 .nav a:active  { color: #D4AF37; }
 
 /***
@@ -149,12 +144,12 @@ Single styles
 .img-responsive { max-width: 100%; }
 
 .btn {
-	color: #D4AF37;
+	color: #fff;
 	background-color: purple;
 	display: inline-block;
 	padding: .5em 1em;
 	margin-bottom: 0;
-	font-weight: 400;
+	font-weight: bold;
 	line-height: 1.2;
 	text-align: center;
 	white-space: nowrap;
@@ -162,6 +157,11 @@ Single styles
 	cursor: pointer;
 	border: 1px solid transparent;
 	border-radius: .2em;
+	text-decoration: none;
+}
+
+.btn a {
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -319,7 +319,8 @@ Wide styles
 ***/
 
 @media (min-width: 42em) {
-	.header { padding: 1.5em 3em; }
+	.header { padding: 1em 3em; }
+	.top-bar { padding: 0.5em 3em; }
 	.nav-bar { padding: 1em 3em; }
 	.content { padding: 2em 3em; }
 	.footer { padding: 1em 3em; }

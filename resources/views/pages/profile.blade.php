@@ -8,12 +8,15 @@
 
 @section('content')
 
-<br>
 <h1 class="page-title">Welcome</h1>
-<h2>{{Auth::user()->username}}</h2>
+<h2>{{Auth::user()->name}}</h2>
 
 <br>
 <br>
+
+<div class="logo-box" style="text-align: center;">
+	<img src="/images/CD-logo.png" alt="logo" style="width: 298px; height: 166px;">
+</div>
 
 <div class="content-list">
 	<ul class="list">
@@ -21,11 +24,5 @@
 		<li class="column-right"><a href="{{ url('/gpacalc') }}">GPA Calculator</a></li>
 	</ul>
 </div>
-
-<br>
-<br>
 	
-
-
-
 @endsection 
